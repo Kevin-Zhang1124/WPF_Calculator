@@ -38,7 +38,7 @@ namespace calculator
         }
 
 
-        // 计算逻辑
+        // Calculation Logic
         void CalculateFunc ()
         {
             long result = 0;
@@ -75,7 +75,7 @@ namespace calculator
             CalculatorM = CalculatorM;
         }
 
-        // 清空逻辑
+        // Clear Logic
         void ClearFunc()
         {
             CalculatorM.AddNum = "";
@@ -91,7 +91,7 @@ namespace calculator
             return true;
         }
 
-        // 命令 绑定到计算按钮上
+        // Command, bind to the calculate button
         public ICommand CalculateAction
         {
             get
@@ -100,7 +100,7 @@ namespace calculator
             }
         }
 
-        // 命令 绑定到清空按钮上
+        // Command, bind to the clear button
         public ICommand ClearAction
         {
             get
