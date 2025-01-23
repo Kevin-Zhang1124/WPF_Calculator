@@ -1,0 +1,53 @@
+﻿<Window x:Class="calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="LightBlue">
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="加减法计算器" HorizontalAlignment="Center" Margin="10" FontSize="30"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="加法" FontSize="15" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding CalculatorM.AddNum}" Grid.Row="1" Grid.Column="1" Margin="2"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="减法" FontSize="15" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding CalculatorM.SubNum}" Grid.Row="3" Grid.Column="1" Margin="2"/>
+
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="结果" FontSize="15" VerticalAlignment="Center"/>
+            <TextBox Text="{Binding CalculatorM.Result}" Grid.Row="5" Grid.Column="1" Margin="2"/>
+
+            <local:CustomButton ButtonCornerRadius="10" Background="#3C7FF8" BackgroundHover="#4D8FFA" BackgroundPressed="#2C6AE6" HorizontalContentAlignment="Center" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="计算" FontSize="15" Command="{Binding CalculateAction}"/>
+            <local:CustomButton ButtonCornerRadius="10" Background="#3C7FF8" BackgroundHover="#4D8FFA" BackgroundPressed="#2C6AE6" HorizontalContentAlignment="Center" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Content="清空" FontSize="15" Command="{Binding ClearAction}"/>
+
+        </Grid>
+        
+    </Grid>
+</Window>
