@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -36,13 +36,13 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Row="1" Grid.Column="0" Text="加法" FontSize="15" VerticalAlignment="Center"/>
-            <TextBox Text="{Binding CalculatorM.AddNum}" Grid.Row="1" Grid.Column="1" Margin="2"/>
+            <TextBox Text="{Binding CalculatorM.AddNum}" Grid.Row="1" Grid.Column="1" Margin="2" VerticalContentAlignment="Center"/>
 
             <TextBlock Grid.Row="3" Grid.Column="0" Text="减法" FontSize="15" VerticalAlignment="Center"/>
-            <TextBox Text="{Binding CalculatorM.SubNum}" Grid.Row="3" Grid.Column="1" Margin="2"/>
+            <TextBox Text="{Binding CalculatorM.SubNum}" Grid.Row="3" Grid.Column="1" Margin="2" VerticalContentAlignment="Center"/>
 
             <TextBlock Grid.Row="5" Grid.Column="0" Text="结果" FontSize="15" VerticalAlignment="Center"/>
-            <TextBox Text="{Binding CalculatorM.Result}" Grid.Row="5" Grid.Column="1" Margin="2"/>
+            <TextBox Text="{Binding CalculatorM.Result}" Grid.Row="5" Grid.Column="1" Margin="2" VerticalContentAlignment="Center"/>
 
             <local:CustomButton ButtonCornerRadius="10" Background="#3C7FF8" BackgroundHover="#4D8FFA" BackgroundPressed="#2C6AE6" HorizontalContentAlignment="Center" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="计算" FontSize="15" Command="{Binding CalculateAction}"/>
             <local:CustomButton ButtonCornerRadius="10" Background="#3C7FF8" BackgroundHover="#4D8FFA" BackgroundPressed="#2C6AE6" HorizontalContentAlignment="Center" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Content="清空" FontSize="15" Command="{Binding ClearAction}"/>
